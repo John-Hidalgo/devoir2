@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{array} 
+
+%%% Ensembles fréquemments utilisés %%%
+\newcommand{\ensembleVide}{\emptyset}  % L'ensemble vide
+\newcommand{\ensembleU}{{\mathbf{U}}}  % L'ensemble universel
+\newcommand{\ensembleB}{{\mathbb{B}}}  % L'ensemble des nombres booléens
+\newcommand{\ensembleN}{{\mathbb{N}}}  % L'ensemble des nombres naturels
+\newcommand{\ensembleZ}{{\mathbb{Z}}}  % L'ensemble des nombres relatifs
+\newcommand{\ensembleR}{\mathbb{R}}    % L'ensemble des nombres reels
+\newcommand{\ensembleQ}{\mathbb{Q}}    % L'ensemble des nombres rationnels
+
+%%% Relations  %%%
+\newcommand{\compose}{\circ}            % Opérateur de composition
+\newcommand{\tuple}[1]{\ensuremath{\left\langle #1 \right\rangle}}  % n-tuple
+\newcommand{\Rcal}{{\mathcal R}}       % «R» caligraphique
+\newcommand{\Lcal}{{\mathcal L}}       % «L» caligraphique
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}       % 
+\newcommand{\ceill}[1]{\lceil #1 \rceil}       % 
+\newcommand{\eqdef}{\overset{{\mbox{\rm\tiny def}}}{=}}
+
+\begin{document}
+
+\textbf{Exercice 2}
+
+\vspace{0.5cm}
+\begin{center}
+\begin{tabular}{|l||c|c|c|c|c|c|}
+\hline 
+ &\   R \ & \  I \  & \  S \  & \  A\   & \  N \  & \  T\  \\\hline\hline
+ $\alpha \ \eqdef \ \{\tuple{x,y} \in \ensembleN^2 \mid x=y+7\} $ &  & \checkmark &  & \checkmark & \checkmark & \\[1mm] \hline
+ $\beta \ \eqdef \ \{\tuple{x,x}  \in \ensembleN^2 \mid x^2 +3 < 80\} $ &  & & \checkmark &  & \checkmark & \checkmark \\[1mm] \hline
+ $\gamma \ \eqdef \ \{\tuple{x,y} \in \ensembleN^2 \mid x\!\!\mod 3\neq y\!\!\mod 6 \} $ &  &  &  &  &  & \\[1mm] \hline
+ $\lambda \ \eqdef \ \{\tuple{x,y} \in \ensembleN^2 \mid x\!\!\mod 3=y\!\!\mod 3 \} $ & \checkmark &  & \checkmark &  &   & \checkmark \\[1mm] \hline
+ $\nu \ \eqdef \ \{\tuple{x,y} \in \ensembleN^2 \mid x=y- 5 \wedge x>y \} $ &  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\[1mm] \hline
+$\alpha^+, \mbox{ où } \alpha \mbox{ est défini ci-haut}$ &  & \checkmark &  & \checkmark & \checkmark & \checkmark \\[1mm] \hline
+\end{tabular}
+\end{center}
+
+\vfill
+
+\end{document}
