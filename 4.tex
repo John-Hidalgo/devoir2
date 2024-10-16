@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+
+\begin{document}
+
+\textbf{Exercice 4}
+
+\vspace{0.5cm}
+
+A)
+
+1) Oui, $g$ est déterministe.
+
+\textbf{Démonstration} Soient $x, y, y^{\prime} \in \mathbb{R}$, il faut montrer que $g(x) = y \land g(x) = y^{\prime}$ implique que $y = y^{\prime}$.
+
+Supposons que  
+$$ g(x) = y \land g(x) = y^{\prime}. $$
+
+Par définition de $g$ et par la propriété transitive de l'égalité 
+$$ y = 42 + 5x \land y^{\prime} = 42 + 5x \implies y = y^{\prime}. $$
+
+$\hfill \square$
+
+2) Oui, $g$ est totale et ainsi une fonction.
+
+\textbf{Démonstration} Soit $x \in \mathbb{R}$, il faut trouver un $y \in \mathbb{R}$ tel que $g(x) = y$.
+
+Les nombres réels sont fermés par multiplication et addition. En particulier, cela signifie que
+
+$$ 42 + 5x  \in \mathbb{R}. $$
+
+Il suffit de prendre $y = 42 + 5x$ pour que $y = g(x)$.
+
+$\hfill \square$
+
+3) Oui, $g$ est une fonction injective.
+
+\textbf{Démonstration} Soient $x, x^{\prime}, y \in \mathbb{R}$, il faut montrer que $g(x) = y \land g(x^{\prime}) = y$ implique que $x = x^{\prime}$.
+
+Supposons que  
+$$ g(x) = y \land g(x^{\prime}) = y. $$
+
+Évaluons $g$, et puisque l'égalité est transitive 
+$$ y = 42 + 5x \land y = 42 + 5x^{\prime} \implies 42 + 5x = 42 + 5x^{\prime} \implies x = x^{\prime}. $$
+
+$\hfill \square$
+
+4) Oui, $g$ est une fonction surjective.
+
+\textbf{Démonstration} Soit $y \in \mathbb{R}$, il faut trouver un $x \in \mathbb{R}$ tel que $g(x) = y$. Les nombres réels sont fermés 
+
+par multiplication et soustraction. Donc, pour notre $y$
+
+$$ \frac{y - 42}{5} \in \mathbb{R}. $$
+
+Prenons maintenant $x = \frac{y - 42}{5}$ et calculons
+
+$$ g(x) = g\left(\frac{y - 42}{5}\right) = 5\left(\frac{y - 42}{5}\right) + 42 = y - 42 + 42 = y. $$
+
+Donc, $g$ est surjectif.
+
+$\hfill \square$
+
+5) Oui, $g$ est bijective car elle est injective et surjective.
+
+\vspace{0.5cm}
+
+B) $g^{-1} : \mathbb{R} \longrightarrow \mathbb{R}$ définie par $x \longmapsto \frac{x - 42}{5}$.
+
+\end{document}
