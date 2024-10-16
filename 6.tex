@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{array} 
+
+\begin{document}
+
+\textbf{Exercice 6}
+
+\vspace{0.5cm}
+
+Nous affirmons que l’hypothèse manquante est que $\mathcal{R}$ soit total.
+
+\vspace{0.5cm}
+
+\textbf{Démonstration} Soit $S$ un ensemble $\mathcal{R} \subseteq S^2 $ une relation symétrique, transitive et total. Nous voulons 
+
+demontrer que \( \mathcal{R} \) est reflexive.
+
+Soit $a \in S $ et comme $ \mathcal{R} $ est total il y a une $b \in S$ tel que 
+$$ \langle a, b \rangle \in \mathcal{R} $$
+
+Si $a = b$ on a fini $ \langle a,a \rangle \in \mathcal{R}$ implique que $ \mathcal{R}$ est reflexive.
+
+Si $a \neq b$ alors, comme $ \mathcal{R} $ est symétrique on a
+
+$$\langle b,a \rangle \in \mathcal{R}.$$
+
+Comme $\mathcal{R}$ est aussi transitive on a si $ \langle a,b \rangle \in \mathcal{R} \land \langle b,a \rangle \in \mathcal{R}$
+
+$$\langle a,a \rangle \in \mathcal{R}$$
+
+Donc, dans tous les cas $( \forall a \in S \mid \langle a,a \rangle \in \mathcal{R} ) $. Ainsi $ \mathcal{R}$ est reflexive.
+
+$\hfill \square$
+
+\end{document}
