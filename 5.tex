@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+
+\begin{document}
+
+\textbf{Exercice 5}
+
+\vspace{0.5cm}
+
+A)
+
+1) Oui, $h$ est déterministe.
+
+\textbf{Démonstration} Soient $a, b, b^{\prime} \in \mathbb{R}$, il faut montrer que $b = b^{\prime}$ si $a \hspace{.1cm} h \hspace{.1cm} b \land a \hspace{.1cm} h \hspace{.1cm} b^{\prime}$.
+
+Supposons que  
+$$ a \hspace{.1cm} h \hspace{.1cm} b \land a \hspace{.1cm} h \hspace{.1cm} b^{\prime}. $$
+
+Par définition de $h$ et par la propriété transitive de l'égalité :
+$$ b = 2a^2 + 42 \land b^{\prime} = 2a^2 + 42 \implies b = b^{\prime}. $$
+
+$\hfill \square$
+
+2) Oui, $h$ est total et ainsi une fonction.
+
+\textbf{Démonstration} Soit $a \in \mathbb{R}$, il faut trouver un $b \in \mathbb{R}$ tel que $a \hspace{.1cm} h \hspace{.1cm} b$.
+
+Les nombres réels sont fermés par multiplication et addition. En particulier, cela signifie que pour $a$, 
+$$ a^2 + 42  \in \mathbb{R}. $$
+
+Prenons simplement $b = a^2 + 42$, alors $a \hspace{.1cm} h \hspace{.1cm} b$.
+
+$\hfill \square$
+
+3) Non, $h$ n'est pas une fonction injective.
+
+\textbf{Démonstration} Voici un contre-exemple : $2$, $-2$ et $44$ sont des nombres réels pour lesquels $44 = 2^2 + 42$ 
+
+et $44 = (-2)^2 + 42$, mais pourtant $2 \neq -2$.
+
+$\hfill \square$
+
+4) Non, $h$ n'est pas non plus surjective.
+
+\textbf{Démonstration} Il faut trouver un $b \in \mathbb{R}$ tel que $\forall a \in \mathbb{R}$, $b \neq a^2 + 42$. Prenons $b=0$. C'est un 
+
+nombre, or pour tout réel $a$, on a $a^2 > 0 \implies 0 < a^2 + 42$.
+
+$\hfill \square$
+
+5) Non $h$ n'est pas bijective, car ce n'est même pas surjective.
+
+\vspace{0.5cm}
+
+B) $h$ n'est pas bijective.
+
+\end{document}
