@@ -4,70 +4,40 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{array} 
 
-\newcommand{\role}{\mbox{RÔLE}}
-\newcommand{\attribut}{\mbox{ATTRIBUT}}
-\newcommand{\boite}{\mbox{BOÎTE}}
-\newcommand{\compose}{\circ}
-\newcommand{\tuple}[1]{\ensuremath{\left\langle #1 \right\rangle}}
-
 \begin{document}
 
-\textbf{Exercice 1}
-
-a) $\text{Dom}(\textit{espèce} \cap \role \times \{ \textsf{munceau} \} )$
+\textbf{Exercice 6}
 
 \vspace{0.5cm}
 
-b) $ \text{Im}( \text{Im}( \textit{espèce} \cap \{ \textsf{gnome} \} \times \attribut ) \times \mathbb{N} \setminus \{ 0,1,2,3,4,5 \} ) $ 
-
-ou
-
-$\{ n \in N \mid (\exists a \in \attribut\ \mid \langle \textsf{gnome},a  \rangle \in \textit{espèce} \land \langle a,n \rangle \in \textit{plus} \land n > \text{len}(\textsf{gnome}) )\}$
+Nous affirmons que l’hypothèse manquante est que $\mathcal{R}$ soit total.
 
 \vspace{0.5cm}
 
-c) $\textit{espèce} \compose \textit{plus}$
+\textbf{Démonstration} Soit \(S\) un ensemble et \(\mathcal{R} \subseteq S^2\) une relation symétrique, transitive, et totale. Nous 
 
-\vspace{0.5cm}
+voulons démontrer que \( \mathcal{R} \) est réflexive. Il faut montrer que $ ( \forall a \in S \mid a \mathcal{R} a)$.
 
-d) Dom(\textit{plus})
+Soit \(a \in S\). Comme \( \mathcal{R} \) est totale, par définition, il existe un \(b \in S\) tel que 
 
-\vspace{0.5cm}
+$$ \langle a, b \rangle \in \mathcal{R} $$
 
-e) $ \text{Im}(\textit{espèce} \cap \{ \textsf{gnome}, \textsf{lionceau} \} \times \attribut)$
+Si $a = b$ on a fini $ \langle a,a \rangle \in \mathcal{R}$ implique que $ \mathcal{R}$ est reflexive.
 
-\vspace{0.5cm}
+Si $a \neq b$ alors, comme $ \mathcal{R} $ est symétrique on a $(\forall a,b \in S \mid \langle a,b \rangle \in \mathcal{R} \implies \langle b,a \rangle \in \mathcal{R} )$ qui implique
 
-f) $ \text{Im}(\textit{espèce})^{c} $
+$$\langle b,a \rangle \in \mathcal{R}.$$
 
-\vspace{0.5cm}
+Comme $\mathcal{R}$ est aussi transitive $ ( \forall a, b, c, \in S \mid \langle a,b \rangle \in \mathcal{R} \land \langle b,c \rangle \in \mathcal{R} \implies \langle a,c \rangle \in \mathcal{R} )$. Donc, on peut 
 
-g) Si nous imaginons que les cartes d'espèces sont achetées en paquets, $\textit{espèce}^{c}$ sont les cartes espèces 
+deduire $\langle a,b \rangle \in \mathcal{R} \land \langle b,a \rangle \in \mathcal{R}$ seulement si
 
-qu'il n'est pas possible d'acheter.
+$$\langle a,a \rangle \in \mathcal{R}.$$
 
-\vspace{0.5cm}
+Puisque pour tout $ a $ nous pouvons toujours épuiser les cas en considérant $a = b$ et $a \neq b$ dans nos deux 
 
-h) $( \forall \tuple{r,a} \in \textit{espèce} \mid ( \exists \tuple{a,n} \in \textit{plus} \mid n > \text{len}(r) ))$
+cas, et dans tous les cas, nous avons montré que $( \forall a \in S \mid \langle a,a \rangle \in \mathcal{R} ) $. Ainsi $ \mathcal{R}$ est reflexive.
 
-\vspace{0.5cm}
-
-i) $ (  \forall \tuple{a,n} \in \textit{plus} \mid |\{ r \in \role \mid \tuple{r,a} \in \textit{espèce} \land \text{len}(r) < m \}| \geq 0.1 | \role | ) $
-
-\vspace{0.5cm}
-
-j) $( \exists R \subset \role \mid |R| > 2 \land ( \forall r \in R \mid \text{len}(r) \leq 15 \land ( \exists r^{\prime} \in \role \mid \text{len}(r - r^{\prime}) > 15 ) ) ) $
-
-\vspace{0.5cm}
-
-k) Les éléments des ensembles sont uniques, donc les rôles et les attributs sont uniques, ce qui conduit à
-
-des paires uniques qui sont les cartes. Techniquement, vous pourriez affirmer que vous pouvez toujours 
-
-former des paires en double, mais les produits cartésiens d'ensembles sont également des ensembles, donc 
-
-encore une fois, ils sont uniques.
-
-
+$\hfill \square$
 
 \end{document}
