@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{pgffor}
+\usepackage{pgf}
+
+\begin{document}
+
+We can loop in LaTeX!! These are the ordered pairs generated for $\lambda|_{ \{0,1,...,10 \}}$ from exercise 3
+
+\foreach \x in {0,...,10} {
+  \foreach \y in {0,...,10} {
+    \pgfmathtruncatemacro{\modx}{mod(\x,3)}
+    \pgfmathtruncatemacro{\mody}{mod(\y,3)}
+    \ifnum\modx=\mody
+      (\x, \y)\\ 
+    \fi
+  }
+}
+
+\end{document}
