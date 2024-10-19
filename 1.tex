@@ -7,20 +7,67 @@
 \newcommand{\role}{\mbox{RÔLE}}
 \newcommand{\attribut}{\mbox{ATTRIBUT}}
 \newcommand{\boite}{\mbox{BOÎTE}}
+\newcommand{\compose}{\circ}
+\newcommand{\tuple}[1]{\ensuremath{\left\langle #1 \right\rangle}}
 
 \begin{document}
 
 \textbf{Exercice 1}
-
-a) $\{ r \in \role\ \mid \langle r, \textsf{museau} \rangle \in \textit{espèce} \}$
-
-b) $\{ n \in N \mid (\exists a \in \attribut\ \mid \langle \textsf{gnome},a  \rangle \in \textit{espèce} \land \langle a,n \rangle \in \textit{plus} \land n > 5 )\}$
-
-c) 
-
-d) $ ( \forall a \in \attribut\ , \forall r \in \role\ \mid \langle a,r \rangle \in \textit{espèce} \land  \implies \textit{len}(a)> 1) $
+s
+a) $\text{Dom}(\textit{espèce} \cap \role \times \{ \textsf{munceau} \} )$
 
 \vspace{0.5cm}
+
+b) $ \text{Im}( \text{Im}( \textit{espèce} \cap \{ \textsf{gnome} \} \times \attribut ) \times \attribut ) $ 
+
+ou
+
+$\{ n \in N \mid (\exists a \in \attribut\ \mid \langle \textsf{gnome},a  \rangle \in \textit{espèce} \land \langle a,n \rangle \in \textit{plus} \land n > 5 )\}$
+
+\vspace{0.5cm}
+
+c) $\textit{espèce} \compose \textit{plus}$
+
+\vspace{0.5cm}
+
+d) Dom(\textit{plus})
+
+\vspace{0.5cm}
+
+e) $ \text{Im}(\textit{espèce} \cap \{ \textsf{gnome}, \textsf{lionceau} \} \times \attribut)$
+
+\vspace{0.5cm}
+
+f) $ \text{Im}(\textit{espèce})^{c} $
+
+\vspace{0.5cm}
+
+g) Si nous imaginons que les cartes d'espèces sont achetées en paquets, $\textit{espèce}^{c}$ sont les cartes espèces 
+
+qu'il n'est pas possible d'acheter.
+
+\vspace{0.5cm}
+
+h) $( \forall \tuple{r,a} \in \textit{espèce} \mid ( \exists \tuple{a,n} \in \textit{plus} \mid n > \text{len}(r) ))$
+
+\vspace{0.5cm}
+
+i) $ (  \forall \tuple{a,n} \in \textit{plus} \mid |\{ r \in \role \mid \tuple{r,a} \in \textit{espèce} \land \text{len}(r) < m \}| \geq 0.1 | \role | ) $
+
+\vspace{0.5cm}
+
+j) $( \exists R \subset \role \mid |R| > 2 \land ( \forall r \in R \mid \text{len}(r) \leq 15 \land ( \exists r^{\prime} \in \role \mid \text{len}(r - r^{\prime}) > 15 ) ) ) $
+
+\vspace{0.5cm}
+
+k) Les éléments des ensembles sont uniques, donc les rôles et les attributs sont uniques, ce qui conduit à
+
+des paires uniques qui sont les cartes. Techniquement, vous pourriez affirmer que vous pouvez toujours 
+
+former des paires en double, mais les produits cartésiens d'ensembles sont également des ensembles, donc 
+
+encore une fois, ils sont uniques.
+
 
 
 \end{document}
