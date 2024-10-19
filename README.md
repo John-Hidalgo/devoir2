@@ -1,1 +1,1 @@
-(./pairs.pdf)
+[pairs generated for exercise 3](./pairs.pdf)
