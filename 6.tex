@@ -14,24 +14,29 @@ Nous affirmons que l’hypothèse manquante est que $\mathcal{R}$ soit total.
 
 \vspace{0.5cm}
 
-\textbf{Démonstration} Soit $S$ un ensemble $\mathcal{R} \subseteq S^2 $ une relation symétrique, transitive et total. Nous voulons 
+\textbf{Démonstration} Soit \(S\) un ensemble et \(\mathcal{R} \subseteq S^2\) une relation symétrique, transitive, et totale. Nous 
 
-demontrer que \( \mathcal{R} \) est reflexive.
+voulons démontrer que \( \mathcal{R} \) est réflexive. Il faut montrer que $ ( \forall a \in S \mid a \mathcal{R} a)$.
 
-Soit $a \in S $ et comme $ \mathcal{R} $ est total il y a une $b \in S$ tel que 
+Soit \(a \in S\). Comme \( \mathcal{R} \) est totale, par définition, il existe un \(b \in S\) tel que 
+
 $$ \langle a, b \rangle \in \mathcal{R} $$
 
 Si $a = b$ on a fini $ \langle a,a \rangle \in \mathcal{R}$ implique que $ \mathcal{R}$ est reflexive.
 
-Si $a \neq b$ alors, comme $ \mathcal{R} $ est symétrique on a
+Si $a \neq b$ alors, comme $ \mathcal{R} $ est symétrique on a $(\forall a,b \in S \mid \langle a,b \rangle \in \mathcal{R} \implies \langle b,a \rangle \in \mathcal{R} )$ qui implique
 
 $$\langle b,a \rangle \in \mathcal{R}.$$
 
-Comme $\mathcal{R}$ est aussi transitive on a si $ \langle a,b \rangle \in \mathcal{R} \land \langle b,a \rangle \in \mathcal{R}$
+Comme $\mathcal{R}$ est aussi transitive $ ( \forall a, b, c, \in S \mid \langle a,b \rangle \in \mathcal{R} \land \langle b,c \rangle \in \mathcal{R} \implies \langle a,c \rangle \in \mathcal{R} )$. Donc, on peut 
 
-$$\langle a,a \rangle \in \mathcal{R}$$
+deduire $\langle a,b \rangle \in \mathcal{R} \land \langle b,a \rangle \in \mathcal{R}$ seulement si
 
-Donc, dans tous les cas $( \forall a \in S \mid \langle a,a \rangle \in \mathcal{R} ) $. Ainsi $ \mathcal{R}$ est reflexive.
+$$\langle a,a \rangle \in \mathcal{R}.$$
+
+Puisque pour tout $ a $ nous pouvons toujours épuiser les cas en considérant $a = b$ et $a \neq b$ dans nos deux 
+
+cas, et dans tous les cas, nous avons montré que $( \forall a \in S \mid \langle a,a \rangle \in \mathcal{R} ) $. Ainsi $ \mathcal{R}$ est reflexive.
 
 $\hfill \square$
 
