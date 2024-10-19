@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{array} 
 
 \begin{document}
@@ -10,16 +10,18 @@
 
 \vspace{0.5cm}
 
-\textbf{Démonstration} Soit $S$ un ensemble $ \mathcal{R} \subseteq \mathcal{L} \subseteq S^2 $ et que \( \mathcal{L} \) est une relation asymétrique. Nous voulons 
+\textbf{Démonstration} Soit $S$ un ensemble $ \mathcal{R} \subseteq \mathcal{L} \subseteq S^2 $ et \( \mathcal{L} \) une relation asymétrique. Nous voulons 
 
-demontrer que \( \mathcal{R} \) est asymétrique.
+demontrer que \( \mathcal{R} \) est asymétrique. Nous devons montrer que $\left(\forall  a, b \in S \mid \,  \langle a, b \rangle \in \mathcal{R} \implies \langle b,a \rangle \notin \mathcal{R} \right)$.
 
-Soit $a, b \in S$ et supposons
+À cette fin, soient $a, b \in S$ et supposons
 $$ \langle a, b \rangle \in \mathcal{R} $$
 
-alors, comme $ \mathcal{R} \subseteq \mathcal{L} $ on a $\langle a, b \rangle \in \mathcal{L}$. Car $\mathcal{L}$ est asymétrique, cela signifie $\left(\forall a, b \in S \mid \,  \langle a, b \rangle \in \mathcal{L} \implies \langle b,a  \rangle \notin \mathcal{L} \right)$. 
+alors, comme $ \mathcal{R} \subseteq \mathcal{L} $ par définition ça veut dire $\left(\forall a, b \mid \,  \langle a, b \rangle \in \mathcal{R} \implies \langle a, b \rangle \in \mathcal{L} \right)$, nous donnant 
 
-Donc,
+$$ \langle a, b \rangle \in \mathcal{L} $$
+
+Car $\mathcal{L}$ est asymétrique, cela signifie $\left(\forall a, b \in S \mid \,  \langle a, b \rangle \in \mathcal{L} \implies \langle b,a  \rangle \notin \mathcal{L} \right)$. Donc,
 
 $$\langle b, a \rangle \notin \mathcal{L}$$
 
@@ -27,9 +29,12 @@ Par la contrapositive de l'implication pour la définition du sous-ensemble nous
 
 $\left(\forall  a, b \mid \,  \langle a, b \rangle \notin \mathcal{L} \implies \langle a, b \rangle \notin \mathcal{R} \right)$ et ainsi
 
-$$\langle b,a \rangle \notin \mathcal{R}$$
+$$\langle b,a \rangle \notin \mathcal{R}.$$
 
-ce qui confirme que $ \mathcal{R}$ est également asymétrique.
+Puisque $a$ et $b$ ont été choisis arbitrairement, nous avons montré que $\left(\forall  a, b \in S \mid \,  \langle a, b \rangle \in \mathcal{R} \implies \langle b,a \rangle \notin \mathcal{R} \right)$ 
+
+et donc \( \mathcal{R} \) est asymétrique.
+
 
 $\hfill \square$
 
