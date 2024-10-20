@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage[margin=1in]{geometry}
 \usepackage{array}
+\newcommand{\tuple}[1]{\ensuremath{\left\langle #1 \right\rangle}}
 
 \begin{document}
 
@@ -22,6 +23,10 @@ $$ a \hspace{.1cm} h \hspace{.1cm} b \land a \hspace{.1cm} h \hspace{.1cm} b^{\p
 Par définition de $h$ et par la propriété transitive de l'égalité :
 $$ b = 2a^2 + 42 \land b^{\prime} = 2a^2 + 42 \implies b = b^{\prime}. $$
 
+Car $a, b, b^{\prime}$ ont été choisis arbitrairement nous l'avons montré $ ( \forall a, b, b^{\prime} \in \mathbb{R} \mid a \hspace{.1cm} h \hspace{.1cm} b \land a \hspace{.1cm} h \hspace{.1cm} b^{\prime} \implies b = b^{\prime}). $
+
+Donc $g$ est déterministe. 
+
 $\hfill \square$
 
 2) Oui, $h$ est total et ainsi une fonction.
@@ -31,15 +36,19 @@ $\hfill \square$
 Les nombres réels sont fermés par multiplication et addition. En particulier, cela signifie que pour $a$, 
 $$ a^2 + 42  \in \mathbb{R}. $$
 
-Prenons simplement $b = a^2 + 42$, alors $a \hspace{.1cm} h \hspace{.1cm} b$.
+Prenons simplement $b = a^2 + 42$, et alors $a \hspace{.1cm} h \hspace{.1cm} b$. Puisque $a$ a été choisi arbitrairement on a que
+
+$( \forall a \in \mathbb{R} \mid ( \exists b \in \mathbb{R} \mid a \hspace{.1cm} h \hspace{.1cm} b ) ).$ Donc $h$ est total et ainsi une fonction.
 
 $\hfill \square$
 
 3) Non, $h$ n'est pas une fonction injective.
 
-\textbf{Démonstration} Voici un contre-exemple : $2$, $-2$ et $44$ sont des nombres réels pour lesquels $44 = 2^2 + 42$ 
+\textbf{Démonstration} Voici un contre-exemple : $2$, $-2$ et $44$ sont des nombres réels pour lesquels $2^2 + 42 = 44$ 
 
-et $44 = (-2)^2 + 42$, mais pourtant $2 \neq -2$.
+et $(-2)^2 + 42 = 44$, mais pourtant $2 \neq -2$. Donc, comme on a que $ ( \exists a, a^{\prime}, b \in \mathbb{R} \mid ( a \hspace{.1cm} h \hspace{.1cm} b \land a^{\prime} \hspace{.1cm} h \hspace{.1cm} b) \land a \neq a^{\prime} )) $ 
+
+qui est la négation de la définition de l'injectivité, $h$ n'est pas injetive.
 
 $\hfill \square$
 
@@ -47,14 +56,14 @@ $\hfill \square$
 
 \textbf{Démonstration} Il faut trouver un $b \in \mathbb{R}$ tel que $\forall a \in \mathbb{R}$, $b \neq a^2 + 42$. Prenons $b=0$. C'est un 
 
-nombre, or pour tout réel $a$, on a $a^2 > 0 \implies 0 < a^2 + 42$.
+nombre, or pour tout réel $a$, on a $a^2 > 0 \implies 0 < a^2 + 42$. Donc $( \exists b \in \mathbb{R} \mid ( \forall a \in \mathbb{R} \mid \tuple{a,b} \notin h ))$ ce qui 
+
+est la négation de la définition de la surjectivité, ce qui signifie que $h$ n'est pas surjective.
 
 $\hfill \square$
 
-5) Non $h$ n'est pas bijective, car ce n'est même pas surjective.
+5) Non, $h$ n'est pas bijective car il n'est ni injective ni surjective.
 
 \vspace{0.5cm}
-
-B) $h$ n'est pas bijective.
 
 \end{document}
