@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage[margin=1in]{geometry}
 \usepackage{array} 
+\newcommand{\tuple}[1]{\ensuremath{\left\langle #1 \right\rangle}}
 
 \begin{document}
 
@@ -10,7 +11,35 @@
 
 \vspace{0.5cm}
 
-Nous affirmons que l’hypothèse manquante est que $\mathcal{R}$ soit total.
+Considérons l'ensemble $S = \{ 1, 2, 3 \}$ et la relation $\mathcal{R}=\{ \tuple{1,1}, \tuple{2,2},\tuple{1,2},\tuple{2,1},\tuple{1,1} \}$ sur $S$. 
+
+Cette relation est réflexive, en effet
+
+$$\tuple{2,1} \implies \tuple{2,1} \in \mathcal{R}$$
+
+et
+
+$$\tuple{1,2} \implies \tuple{1,2} \in \mathcal{R}.$$
+
+Il est également transitive car,
+
+$$\tuple{2,1} \land \tuple{1,2} \implies \tuple{2,2} \in \mathcal{R}$$
+
+et
+
+$$\tuple{1,2} \land \tuple{2,1}\implies \tuple{1,1} \in \mathcal{R}.$$
+
+Et pourtant, ce n'est pas réflexive car $ 3 \in S \land \tuple{3,3} \notin \mathcal{R} $ 
+
+\vspace{0.5cm}
+
+Notez que si toutefois pour $3$ il existait une $b$ dans $S$ tel que la paire $\tuple{3,b}$ soit aussi dans $S$, l’argument 
+
+fonctionnerait alors car la symétrie force son miroir dans $S$ et la transitivité force la réflexion dans $S$.
+
+Cette hypothèse supplémentaire n'est que la définition de la totalité d'une relation donc nous affirmons 
+
+que l’hypothèse manquante est que $\mathcal{R}$ soit total.
 
 \vspace{0.5cm}
 
