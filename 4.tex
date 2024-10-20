@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{array}
 
 \begin{document}
@@ -22,6 +22,10 @@ $$ g(x) = y \land g(x) = y^{\prime}. $$
 Par définition de $g$ et par la propriété transitive de l'égalité 
 $$ y = 42 + 5x \land y^{\prime} = 42 + 5x \implies y = y^{\prime}. $$
 
+Car $x, y, y^{\prime}$ ont été choisis arbitrairement nous l'avons montré $ ( \forall x, y, y^{\prime} \in \mathbb{R} \mid g(x) = y \land g(x) = y^{\prime} \implies y = y^{\prime}). $
+
+Donc $g$ est déterministe. 
+
 $\hfill \square$
 
 2) Oui, $g$ est totale et ainsi une fonction.
@@ -32,7 +36,10 @@ Les nombres réels sont fermés par multiplication et addition. En particulier, 
 
 $$ 42 + 5x  \in \mathbb{R}. $$
 
-Il suffit de prendre $y = 42 + 5x$ pour que $y = g(x)$.
+Il suffit de prendre $y = 42 + 5x$ pour que $y = g(x)$. Puisque $x$ a été choisi arbitrairement $( \forall x \in \mathbb{R} \mid ( \exists y \in \mathbb{R} \mid g(x) = y ) ).$
+
+
+Ainsi $g$ est totale.
 
 $\hfill \square$
 
@@ -43,8 +50,12 @@ $\hfill \square$
 Supposons que  
 $$ g(x) = y \land g(x^{\prime}) = y. $$
 
-Évaluons $g$, et puisque l'égalité est transitive 
-$$ y = 42 + 5x \land y = 42 + 5x^{\prime} \implies 42 + 5x = 42 + 5x^{\prime} \implies x = x^{\prime}. $$
+Évaluons $g$, et puisque l'égalité est transitive et un peu d'arithmétique
+$$ y = 42 + 5x \land y = 42 + 5x^{\prime} \implies 42 + 5x = 42 + 5x^{\prime} \implies 5x = 5x^{\prime} \implies x = x^{\prime}. $$
+
+Car $x, x^{\prime}, y$ ont été choisis arbitrairement nous avons que $ ( \forall x, x^{\prime}, y \in \mathbb{R} \mid g(x) = y \land g(x^{\prime}) = y \implies x = x^{\prime}). $
+
+Donc $g$ est injective
 
 $\hfill \square$
 
@@ -60,7 +71,7 @@ Prenons maintenant $x = \frac{y - 42}{5}$ et calculons
 
 $$ g(x) = g\left(\frac{y - 42}{5}\right) = 5\left(\frac{y - 42}{5}\right) + 42 = y - 42 + 42 = y. $$
 
-Donc, $g$ est surjectif.
+Et cela vaut pour tout $y$ alors $( \forall y \in \mathbb{R} \mid ( \exists x \in \mathbb{R} \mid g(x) = y ) )$. Donc, $g$ est surjective.
 
 $\hfill \square$
 
